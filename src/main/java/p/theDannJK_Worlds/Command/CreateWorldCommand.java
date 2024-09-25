@@ -12,6 +12,7 @@ import p.theDannJK_Worlds.TheDannJK_Worlds;
 public class CreateWorldCommand implements CommandExecutor {
 
     private final TheDannJK_Worlds plugin;
+    private final String PERMISSION = "thedannjk.worlds.createworld";
 
     public CreateWorldCommand(TheDannJK_Worlds plugin) {
         this.plugin = plugin;
@@ -20,12 +21,17 @@ public class CreateWorldCommand implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if (!(sender instanceof Player)) {
-            sender.sendMessage("Este comando solo puede ser usado por jugadores.");
+            sender.sendMessage(getMessage("only_players_command"));
             return false;
         }
 
+        if (!sender.hasPermission(PERMISSION)) {
+            sender.sendMessage(getMessage("no_permission"));
+            return true;
+        }
+
         if (args.length < 1) {
-            sender.sendMessage("Debes especificar el nombre del mundo.");
+            sender.sendMessage(getMessage("missing_world_name"));
             return false;
         }
 
@@ -34,8 +40,8 @@ public class CreateWorldCommand implements CommandExecutor {
         creator.type(WorldType.NORMAL);
 
         World world = plugin.getServer().createWorld(creator);
-        sender.sendMessage("Mundo " + worldName + " creado.");
-
+        sender.sendMessage(getMessage("world_created")
+                .replace("%world%", worldName));
 
         plugin.getConfig().set("worlds." + worldName + ".type", "NORMAL");
         plugin.getConfig().set("worlds." + worldName + ".spawn.x", world.getSpawnLocation().getX());
@@ -44,5 +50,9 @@ public class CreateWorldCommand implements CommandExecutor {
 
         plugin.saveConfig();
         return true;
+    }
+
+    private String getMessage(String key) {
+        return plugin.getConfig().getString( "messages.prefix" + "messages." + key, "Mensaje no definido en la configuración.");
     }
 }

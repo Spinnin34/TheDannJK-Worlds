@@ -12,10 +12,9 @@ commands:
   tpworld:
     description: Teletransporta a un jugador a otro mundo.
     usage: /tpworld <nombre_mundo> <x> <y> <z>
-permissions:
-  worldmanager.create:
-    description: Permite crear mundos.
-    default: op
-  worldmanager.setspawn:
-    description: Permite establecer puntos de spawn.
-    default: op
+  reloadworlds:
+    description: Recarga la configuración del plugin.
+    usage: /reloadworlds
+  editportal:
+    description: Edita los parámetros de un portal.
+    usage: /editportal <nombre_portal> <region> <world_to>

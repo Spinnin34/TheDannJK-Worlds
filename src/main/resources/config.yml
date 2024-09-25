@@ -1,35 +1,32 @@
 worlds:
   mundo1:
-    type: NORMAL
     spawn:
       x: 100
-      y: 150
-      z: 100
-  mundo2:
-    type: NORMAL
-    spawn:
-      x: 100
-      y: 50
+      y: 64
       z: 100
 
 portals:
   portal1:
-    world_from: world
+    region: portalRegion1
     world_to: mundo1
-    location_from:
-      x1: 7
-      y1: 42
-      z1: -12
-      x2: 9
-      y2: 48
-      z2: -12
-  portal2:
-    world_from: mundo2
-    world_to: mundo1
-    location_from:
-      x1: 100
-      y1: 50
-      z1: 100
-      x2: 110
-      y2: 60
-      z2: 110
+
+
+messages:
+  prefix: "§x§C§8§8§0§F§BT§x§B§C§7§D§F§Ch§x§B§0§7§A§F§Ce§x§A§3§7§7§F§DD§x§9§7§7§4§F§Da§x§8§B§7§0§F§En§x§7§F§6§D§F§En§x§7§2§6§A§F§FJ§x§6§6§6§7§F§FK §f»§7 "
+  teleport_success: "Has sido teletransportado a §x§C§5§7§8§F§B%world%§7."
+  region_not_found: "§x§F§B§0§0§4§4⚠ No se encontró la región: §x§C§5§7§8§F§B%region%."
+  teleport_cooldown: "Debes esperar antes de teletransportarte nuevamente."
+  player_inside_region: "Estás dentro de la región §x§C§5§7§8§F§B%region%§7."
+  only_players_command: "§x§F§B§0§0§4§4⚠ Este comando solo puede ser usado por jugadores."
+  missing_world_name: "§x§F§B§0§0§4§4⚠ Debes especificar el nombre del mundo."
+  world_created: "§x§8§D§F§B§5§2§l✓§x§8§D§F§B§5§2 El mundo %world% ha sido creado exitosamente."
+  spawn_set: "Punto de spawn establecido en el mundo §x§C§5§7§8§F§B%world%§7 en las coordenadas §7%x%§f, §7%y%§f, §7%z%§f."
+  correct_usage: "§x§F§B§0§0§4§4⚠ Uso correcto: /tpworld <nombre_mundo> <x> <y> <z>"
+  correct_usage2: "§x§F§B§0§0§4§4⚠ Uso correcto: /editportal <nombre_portal> <region> <world_to>"
+  world_not_found: "§x§F§B§0§0§4§4⚠ El mundo %world% no existe."
+  portal_not_found: "§x§F§B§0§0§4§4⚠ El portal %portal% no existe."
+  invalid_coordinates: "§x§F§B§0§0§4§4⚠ Las coordenadas deben ser números válidos."
+  teleported: "Teletransportado a §x§C§5§7§8§F§B%world%§7 en las coordenadas %x%, %y%, %z%."
+  config_reloaded: "§x§8§D§F§B§5§2§l✓§x§8§D§F§B§5§2 La configuración del plugin ha sido recargada."
+  no_permission: "§x§F§B§0§0§4§4⚠ No tienes permiso para ejecutar este comando."
+  portal_updated: "El portal §x§C§5§7§8§F§B%portal%§7 ha sido actualizado con región §x§C§5§7§8§F§B%region%§7 y destino §x§C§5§7§8§F§B%world%§7."
