@@ -1,9 +1,0 @@
-p\theDannJK_Worlds\Command\TeleportCommand.class
-p\theDannJK_Worlds\Listener\PortalInteractListener.class
-p\theDannJK_Worlds\Command\SetSpawnCommand.class
-p\theDannJK_Worlds\TheDannJK_Worlds.class
-p\theDannJK_Worlds\Utils\Portal.class
-p\theDannJK_Worlds\Utils\Utils.class
-p\theDannJK_Worlds\Command\TabCompleter\TeleportTabCompleter.class
-p\theDannJK_Worlds\Manager\PortalManager.class
-p\theDannJK_Worlds\Command\CreateWorldCommand.class
