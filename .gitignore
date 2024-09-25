@@ -1,0 +1,24 @@
+# Ignorar archivos de configuración
+*.config
+*.log
+
+# Ignorar directorios de compilación
+build/
+bin/
+obj/
+target/
+.idea/
+
+# Ignorar archivos específicos
+secret.txt
+thedannjk_worlds.iml
+
+# Ignorar todos los archivos .tmp
+*.tmp
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de caché
+.cache/

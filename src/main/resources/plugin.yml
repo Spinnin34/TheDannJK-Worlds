@@ -1,0 +1,21 @@
+name: TheDannJK_Worlds
+version: '1.0'
+main: p.theDannJK_Worlds.TheDannJK_Worlds
+api-version: '1.19'
+commands:
+  createworld:
+    description: Crea un nuevo mundo.
+    usage: /createworld <nombre>
+  setspawn:
+    description: Establece el punto de spawn en el mundo actual.
+    usage: /setspawn
+  tpworld:
+    description: Teletransporta a un jugador a otro mundo.
+    usage: /tpworld <nombre_mundo> <x> <y> <z>
+permissions:
+  worldmanager.create:
+    description: Permite crear mundos.
+    default: op
+  worldmanager.setspawn:
+    description: Permite establecer puntos de spawn.
+    default: op
