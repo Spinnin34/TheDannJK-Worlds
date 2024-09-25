@@ -53,6 +53,9 @@ public class CreateWorldCommand implements CommandExecutor {
     }
 
     private String getMessage(String key) {
-        return plugin.getConfig().getString( "messages.prefix" + "messages." + key, "Mensaje no definido en la configuración.");
+        String prefix = plugin.getConfig().getString("messages.prefix", "");
+        String message = plugin.getConfig().getString("messages." + key, "Mensaje no definido en la configuración.");
+
+        return prefix + message;
     }
 }
