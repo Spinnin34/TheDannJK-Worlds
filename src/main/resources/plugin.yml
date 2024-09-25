@@ -5,16 +5,11 @@ api-version: '1.19'
 commands:
   createworld:
     description: Crea un nuevo mundo.
-    usage: /createworld <nombre>
   setspawn:
     description: Establece el punto de spawn en el mundo actual.
-    usage: /setspawn
   tpworld:
     description: Teletransporta a un jugador a otro mundo.
-    usage: /tpworld <nombre_mundo> <x> <y> <z>
   reloadworlds:
     description: Recarga la configuración del plugin.
-    usage: /reloadworlds
   editportal:
     description: Edita los parámetros de un portal.
-    usage: /editportal <nombre_portal> <region> <world_to>
